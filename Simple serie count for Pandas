@@ -1,0 +1,12 @@
+# using Counter from the collections module
+from collection import Counter
+
+# creating a simple function that makes plotting much easier
+def make_count(serie, howmany):
+  my_list1, my_list2 = [], []
+  my_count = Counter(serie)
+  for x,y in my_count.most_common(howmany):
+    my_list1.append(x)
+    my_list2.append(y)
+  my_dict = {'labels': my_list1, 'values': my_list2}
+  return my_dict
